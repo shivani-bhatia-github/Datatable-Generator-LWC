@@ -1,0 +1,14 @@
+<template>
+    <lightning-input label="Enter Value" value={inputValue} data-id="queryInput" onchange={handleInputChange}></lightning-input>
+    <lightning-button label="Submit" onclick={handleSubmit}></lightning-button>
+    <lightning-button label="Export" onclick={handleExport}></lightning-button>
+    <lightning-datatable
+        key-field="Id"
+        data={data}
+        columns={columns}
+        hide-checkbox-column
+        onrowaction={handleRowAction}
+        inline-edit-enabled
+        onsave={handleSave}>
+    </lightning-datatable>
+</template>
